@@ -1,0 +1,72 @@
+<fieldset>
+    <legend>Basic</legend>
+    <div class="form-group">
+        <label for="contact-firstName" class="control-label col-sm-2">First Name</label>
+        <div class="col-sm-10">
+            <input id="contact-firstName" class="form-control" ng-model="contact.firstName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-lastName" class="control-label col-sm-2">Last Name</label>
+        <div class="col-sm-10">
+            <input id="contact-lastName" class="form-control" ng-model="contact.lastName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-email" class="control-label col-sm-2">Email</label>
+        <div class="col-sm-10">
+            <input type="email" id="contact-email" class="form-control" ng-model="contact.email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-phone" class="control-label col-sm-2">Phone</label>
+        <div class="col-sm-10">
+            <input type="phone" id="contact-phone" class="form-control" ng-model="contact.phone">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-birthday" class="control-label col-sm-2">Birthday</label>
+        <div class="col-sm-10">
+            <input id="contact-birthday" class="form-control" ng-model="contact.birthday" type="date">
+        </div>
+    </div>
+</fieldset>
+<fieldset>
+    <legend>Address</legend>
+    <div class="form-group">
+        <label for="contact-street1" class="control-label col-sm-2">Street 1</label>
+        <div class="col-sm-10">
+            <input id="contact-street1" class="form-control" ng-model="contact.street1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-street2" class="control-label col-sm-2">Street2</label>
+        <div class="col-sm-10">
+            <input id="contact-street2" class="form-control" ng-model="contact.street2">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-city" class="control-label col-sm-2">City</label>
+        <div class="col-sm-10">
+            <input id="contact-city" class="form-control" ng-model="contact.city">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-state" class="control-label col-sm-2">State</label>
+        <div class="col-sm-10">
+            <input id="contact-state" class="form-control" ng-model="contact.state">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="contact-zip" class="control-label col-sm-2">Zip Code</label>
+        <div class="col-sm-10">
+            <input id="contact-zip" class="form-control" ng-model="contact.zip">
+        </div>
+    </div>
+</fieldset>
+<div class="form-group form-actions">
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="/" class="btn btn-link">Cancel</a>
+    </div>
+</div>
