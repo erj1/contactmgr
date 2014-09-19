@@ -8,7 +8,7 @@ class ContactsTableSeeder extends Seeder {
 	public function run()
 	{
 		// clear out the database on subsequent seeding attempts
-		$DB::table('contacts')->truncate();
+		DB::table('contacts')->truncate();
 		
 		$faker = Faker::create();
 
