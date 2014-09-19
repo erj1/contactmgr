@@ -17,6 +17,7 @@ class Contact extends Eloquent
         $birthday = new Carbon($this->attributes['birthday']);
         $today    = new Carbon();
 
-        return ($today->diffInDays($birthday) == 0);
+
+        return ($birthday->month == $today->month && $birthday->day == $today->day);
     }
 }

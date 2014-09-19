@@ -23,9 +23,6 @@ class CreateContactsTable extends Migration {
 			// Contact Last Name
 			$table->string('lastName')->nullable();
 
-			// Contact Photo
-			$table->string('photo')->nullable();
-
 			// Contact Birthday
 			$table->date('birthday')->nullable();
 

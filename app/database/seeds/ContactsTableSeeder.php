@@ -20,12 +20,10 @@ class ContactsTableSeeder extends Seeder {
 
 		foreach(range(1, 99) as $index)
 		{
-			$n = $faker->numberBetween(1, 59);
             Contact::create([
 				'firstName' => $faker->firstName,
 				'lastName'  => $faker->lastName,
 				'birthday'  => $faker->date,
-                'photo'     => "pic{$n}.jpg",
                 'street1'    => $faker->streetAddress,
 				'street2'    => $faker->secondaryAddress,
 				'city'       => $faker->city,
