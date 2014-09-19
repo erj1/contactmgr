@@ -7,17 +7,25 @@ class ContactsTableSeeder extends Seeder {
 
 	public function run()
 	{
-		DB::table('contacts')->truncate();
+		// clear out the database on subsequent seeding attempts
+		$DB::table('contacts')->truncate();
 		
 		$faker = Faker::create();
 
+		// add a known record
 		Contact::create([
 			'firstName' => 'Eric',
 			'lastName'  => 'Jones',
 			'birthday'  => date('Y-m-d'),
-            'photo'     => 'eric_jones250.jpg'
+			'street1'   => '1 Monument Circle',
+			'city'      => 'Indianapolis',
+			'state'     => 'IN',
+			'zip'       => '46204',
+			'email'     => 'eric@example.com',
+			'phone'     => '(555) 123-4444'
 		]);
 
+		// add 99 random records
 		foreach(range(1, 99) as $index)
 		{
             Contact::create([
