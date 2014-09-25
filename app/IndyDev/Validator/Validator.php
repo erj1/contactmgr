@@ -19,7 +19,7 @@ abstract class Validator {
         $validator = V::make($data, static::$rules);
 
         if ($validator->fails()) {
-            $this->errors = $validator->messages();
+            $this->errors = $validator->messages()->all();
             return false;
         }
 

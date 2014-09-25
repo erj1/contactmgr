@@ -12,7 +12,7 @@ class ContactController extends \BaseController {
     }
 
 	/**
-	 * Display a listing of the resource.
+	 * Provides a JSON string of the contacts
 	 *
 	 * @return Response
 	 */
@@ -32,7 +32,7 @@ class ContactController extends \BaseController {
 		$contact = $this->contact->create(Input::all());
         return ($contact)
             ? Response::json($contact, 201)
-            : Response::json($this->contact->errors()->first(), 400);
+            : Response::json($this->contact->errors(), 400);
 	}
 
 
@@ -59,7 +59,7 @@ class ContactController extends \BaseController {
         $contact = $this->contact->update($id, Input::all());
         return ($contact)
             ? Response::json($contact, 200)
-            : Response::json($this->contact->errors()->first(), 400);
+            : Response::json($this->contact->errors(), 400);
 	}
 
 

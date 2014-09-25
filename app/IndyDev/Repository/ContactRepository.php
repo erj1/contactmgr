@@ -22,7 +22,7 @@ class ContactRepository
 
     public function all()
     {
-        return Contact::all();
+        return Contact::orderBy('lastName', 'asc')->get();
     }
 
     public function get($contact_id)
@@ -61,13 +61,13 @@ class ContactRepository
             $contact->firstName = array_get($data, 'firstName');
             $contact->lastName  = array_get($data, 'lastName', $contact->lastName);
             $contact->birthday  = array_get($data, 'birthday', $contact->birthday);
-            $contact->email     = array_get($data, 'email', $contact->email);
-            $contact->phone     = array_get($data, 'phone', $contact->phone);
-            $contact->street1   = array_get($data, 'street1', $contact->street1);
-            $contact->street2   = array_get($data, 'street2', $contact->street2);
-            $contact->city      = array_get($data, 'city', $contact->city);
-            $contact->state     = array_get($data, 'state'. $contact->state);
-            $contact->zip       = array_get($data, 'zip', $contact->zip);
+            $contact->email     = array_get($data, 'email',    $contact->email);
+            $contact->phone     = array_get($data, 'phone',    $contact->phone);
+            $contact->street1   = array_get($data, 'street1',  $contact->street1);
+            $contact->street2   = array_get($data, 'street2',  $contact->street2);
+            $contact->city      = array_get($data, 'city',     $contact->city);
+            $contact->state     = array_get($data, 'state',    $contact->state);
+            $contact->zip       = array_get($data, 'zip',      $contact->zip);
 
             $contact->save();
 

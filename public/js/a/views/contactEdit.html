@@ -11,9 +11,9 @@
         <div class="body">
             <div class="page-header"><h1>Edit Contact {{ contact.firstName }}</h1></div>
 
-            <div class="alert alert-danger" ng-show="validation.error">
+            <div class="alert alert-danger" ng-show="validation">
                 <strong>Validation Errors</strong>
-                <p>{{ validation.error.message }}</p>
+                <p ng-repeat="err in validation">{{ err }}<p>
             </div>
 
             <form id="contact-edit-form" class="form-horizontal" ng-submit="updateContact()"

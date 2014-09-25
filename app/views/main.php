@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Contact Manager Application</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
     <script type="text/javascript" src="/js/a/angular.js"></script>
@@ -16,15 +15,15 @@
 </head>
 <body ng-controller="ContactsCtrl">
 
-    <div class="container" ng-show="data.error">
-        <div class="row" >
-            <div class="alert alert-danger">
-                Error {{ data.error }}. The contact data could not be loaded.
-            </div>
+    
+    <div ng-show="data.error">
+        <h1>Server Error</h1>
+        <div class="alert alert-danger">
+            {{ data.error }}
         </div>
     </div>
 
-    <div ng-hide="data.error"><ng-view/></div>
+    <div ng-hide="data.error"><ng-view /></div>
 
 </body>
 </html>

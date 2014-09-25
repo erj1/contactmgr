@@ -4,12 +4,35 @@ use Carbon\Carbon;
 
 class Contact extends Eloquent
 {
-	protected $table = 'contacts';
+	/**
+     * Table
+     *
+     * @var string
+     */
+    protected $table = 'contacts';
 
+    /**
+     * Guarded
+     *
+     * @var array
+     */
 	protected $guarded = ['id', 'created_at', 'updated_at'];
 
+    /**
+     * Appends
+     *
+     * @var array
+     */
     protected $appends = ['is_birthday'];
 
+
+    /**
+     * Get Is Birthday Attribute
+     *
+     * Identifies if the contact's birthday is today.
+     *
+     * @return boolean
+     */
     public function getIsBirthdayAttribute()
     {
         if (empty($this->attributes['birthday'])) return false;
